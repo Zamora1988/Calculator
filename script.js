@@ -19,14 +19,15 @@ for (let i = 0; i < number.length; i++) {
     let lastChar = currentString[currentString.length - 1];
 
     if(currentString.length == 0 && e.target.innerHTML === '.'){
-        alert("Begin only with numbers, 0 included"); 
         input.innerHTML = "";
+        alert("Begin only with numbers, 0 included"); 
+        input.innerHTML = "restart";  
     }
 
     if(currentString.lastIndexOf('0') == "0" && e.target.innerHTML === "0"){
         alert("Only a '.' is allowed after 0");
         input.innerHTML = "";
-
+        input.innerHTML = "restart";
     }
     
     if (resultDisplayed === false) {
